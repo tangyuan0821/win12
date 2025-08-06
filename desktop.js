@@ -16,7 +16,7 @@ console.log('%cWindows 12 网页版 (GitHub: tjy-gitnub/win12)', 'background-ima
 
 function loadlang(code) {
     $.i18n.properties({
-        name: 'lang_' + code,
+        name: 'lang',
         path: 'lang/', // 目录
         language:'',
         mode: 'map',
@@ -50,7 +50,7 @@ let langc={
     'zh-Hant':'zh-TW',
     'zh-HK':'zh-TW',
     'zh-hk':'zh-TW',
-
+    'zh':'zh-CN',
 
     'en':'en',
     'en-US':'en',
