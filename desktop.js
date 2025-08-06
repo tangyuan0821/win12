@@ -50,7 +50,7 @@ let langc={
     'zh-Hant':'zh-TW',
     'zh-HK':'zh-TW',
     'zh-hk':'zh-TW',
-    'zh':'zh-CN',
+
 
     'en':'en',
     'en-US':'en',
