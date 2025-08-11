@@ -1614,9 +1614,19 @@ let copilot = {
                     // 获取实际响应内容
                     const actualResponse = typeof proxyResponse.body === 'string' ? 
                         JSON.parse(proxyResponse.body) : proxyResponse.body;
-                    responseText = actualResponse.response || actualResponse;
+                    
+                    // Fix: Properly handle object responses to prevent "[object Object]" display
+                    const rawResponse = actualResponse && (actualResponse.response || actualResponse);
+                    if (typeof rawResponse === 'object' && rawResponse !== null) {
+                        // Convert object to JSON string for display
+                        responseText = JSON.stringify(rawResponse, null, 2);
+                    } else if (rawResponse !== undefined && rawResponse !== null) {
+                        responseText = String(rawResponse);
+                    } else {
+                        responseText = '抱歉，AI 响应格式异常，请重试。';
+                    }
                 } catch (e) {
-                    responseText = response;
+                    responseText = typeof response === 'object' ? JSON.stringify(response) : String(response);
                 }
 
                 // 处理特殊命令
