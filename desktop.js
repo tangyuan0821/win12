@@ -1617,7 +1617,7 @@ let copilot = {
                     // Cloudflare Worker returns an array of tasks
                     if (Array.isArray(actualResponse) && actualResponse.length > 0) {
                         const taskResult = actualResponse[0];
-                        responseText = taskResult.response?.response || taskResult.response || actualResponse;
+                        responseText = (taskResult.response && taskResult.response.response) || taskResult.response || actualResponse;
                     } else {
                         responseText = actualResponse.response || actualResponse;
                     }
