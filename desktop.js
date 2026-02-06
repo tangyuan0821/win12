@@ -1614,10 +1614,15 @@ let copilot = {
                     const actualResponse = typeof proxyResponse.body === 'string' ? 
                         JSON.parse(proxyResponse.body) : proxyResponse.body;
                     
-                    // Cloudflare Worker returns an array of tasks
+                    // Cloudflare Worker returns an array of tasks: [{ inputs: {...}, response: {...} }]
+                    // The nested response.response structure is because:
+                    // - taskResult.response is the AI SDK's response object
+                    // - taskResult.response.response contains the actual generated text
                     if (Array.isArray(actualResponse) && actualResponse.length > 0) {
                         const taskResult = actualResponse[0];
                         responseText = (taskResult.response && taskResult.response.response) || taskResult.response || actualResponse;
+                    } else if (Array.isArray(actualResponse) && actualResponse.length === 0) {
+                        responseText = 'AI 响应为空，请重试';
                     } else {
                         responseText = actualResponse.response || actualResponse;
                     }
