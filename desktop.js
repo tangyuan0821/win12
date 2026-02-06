@@ -1593,8 +1593,7 @@ let copilot = {
                     'Content-Type': 'application/json'
                 },
                 body: {
-                    prompt: t,
-                    history: copilot.history
+                    messages: copilot.history
                 }
             }),
             success: function(response) {
@@ -1614,7 +1613,14 @@ let copilot = {
                     // 获取实际响应内容
                     const actualResponse = typeof proxyResponse.body === 'string' ? 
                         JSON.parse(proxyResponse.body) : proxyResponse.body;
-                    responseText = actualResponse.response || actualResponse;
+                    
+                    // Cloudflare Worker returns an array of tasks
+                    if (Array.isArray(actualResponse) && actualResponse.length > 0) {
+                        const taskResult = actualResponse[0];
+                        responseText = taskResult.response?.response || taskResult.response || actualResponse;
+                    } else {
+                        responseText = actualResponse.response || actualResponse;
+                    }
                 } catch (e) {
                     responseText = response;
                 }
