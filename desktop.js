@@ -1593,7 +1593,8 @@ let copilot = {
                     'Content-Type': 'application/json'
                 },
                 body: {
-                    messages: copilot.history
+                    prompt: t,
+                    history: copilot.history
                 }
             }),
             success: function(response) {
@@ -1613,23 +1614,8 @@ let copilot = {
                     // 获取实际响应内容
                     const actualResponse = typeof proxyResponse.body === 'string' ? 
                         JSON.parse(proxyResponse.body) : proxyResponse.body;
-                    
-                    // 处理后端返回的数组格式 [{inputs: {...}, response: {...}}]
-                    if (Array.isArray(actualResponse) && actualResponse.length > 0) {
-                        const task = actualResponse[0];
-                        // AI 响应可能是 {response: "text"} 对象或直接是字符串
-                        if (typeof task.response === 'string') {
-                            responseText = task.response;
-                        } else if (task.response?.response) {
-                            responseText = task.response.response;
-                        } else {
-                            responseText = JSON.stringify(task.response);
-                        }
-                    } else {
-                        responseText = actualResponse.response || actualResponse;
-                    }
+                    responseText = actualResponse.response || actualResponse;
                 } catch (e) {
-                    console.error('Error parsing response:', e);
                     responseText = response;
                 }
 
