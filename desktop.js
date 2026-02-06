@@ -1614,6 +1614,8 @@ let copilot = {
                     const actualResponse = typeof proxyResponse.body === 'string' ? 
                         JSON.parse(proxyResponse.body) : proxyResponse.body;
                     
+                    console.log('AI response structure:', actualResponse);
+                    
                     // Cloudflare Worker returns an array of tasks: [{ inputs: {...}, response: {...} }]
                     // The nested response.response structure is because:
                     // - taskResult.response is the AI SDK's response object
@@ -1627,6 +1629,7 @@ let copilot = {
                         responseText = actualResponse.response || actualResponse;
                     }
                 } catch (e) {
+                    console.error('Error parsing AI response:', e);
                     responseText = response;
                 }
 
