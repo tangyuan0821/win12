@@ -1617,7 +1617,7 @@ let copilot = {
                     // 处理后端返回的数组格式 [{inputs: {...}, response: {...}}]
                     if (Array.isArray(actualResponse) && actualResponse.length > 0) {
                         const task = actualResponse[0];
-                        // Cloudflare AI 返回的响应可能是 {response: "text"} 或直接是字符串
+                        // AI 响应可能是 {response: "text"} 对象或直接是字符串
                         if (typeof task.response === 'string') {
                             responseText = task.response;
                         } else if (task.response?.response) {
