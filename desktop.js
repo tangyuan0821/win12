@@ -1593,8 +1593,7 @@ let copilot = {
                     'Content-Type': 'application/json'
                 },
                 body: {
-                    prompt: t,
-                    history: copilot.history
+                    messages: copilot.history
                 }
             }),
             success: function(response) {
@@ -1614,8 +1613,16 @@ let copilot = {
                     // 获取实际响应内容
                     const actualResponse = typeof proxyResponse.body === 'string' ? 
                         JSON.parse(proxyResponse.body) : proxyResponse.body;
-                    responseText = actualResponse.response || actualResponse;
+                    
+                    // 处理后端返回的数组格式 [{inputs: {...}, response: {...}}]
+                    if (Array.isArray(actualResponse) && actualResponse.length > 0) {
+                        const task = actualResponse[0];
+                        responseText = task.response?.response || task.response;
+                    } else {
+                        responseText = actualResponse.response || actualResponse;
+                    }
                 } catch (e) {
+                    console.error('Error parsing response:', e);
                     responseText = response;
                 }
 
