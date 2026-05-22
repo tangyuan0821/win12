@@ -233,7 +233,7 @@ function widgetsMove(elt, e) {
             elt.style.top = `${top}px`;
             // 基于人脑计算 qwq
             gridnow = {
-                // 四舍五入(组件宽度 / 2 + 组件视窗右边距 - 布局右边距) / ((网格总列数 * 网格宽度 + 网格间距 * 网格间距数量) / 网格总数量) - 元素网格列尾 + 校正值)
+                // 四舍五入 (组件宽度 / 2 + 组件视窗右边距 - 布局右边距) / ((网格总列数 * 网格宽度 + 网格间距 * 网格间距数量) / 网格总数量) - 元素网格列尾 + 校正值)
                 col: ((width / 2 + elt.getBoundingClientRect().right - 20) / ((gridcolmax * 83 + 10 * (gridcolmax - 1)) / gridcolmax) - gridcol/* + (gridcol - 2) * 0.5*/).toFixed(0),
                 row: ((height / 2 + top - 20) / ((gridrowmax * 83 + 10 * (gridrowmax - 1)) / gridrowmax) + (2 - gridrow) * 0.5).toFixed(0)
             };

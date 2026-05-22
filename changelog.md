@@ -52,8 +52,8 @@
 	&emsp;&emsp;-各位可以抽时间去看看 README.md，一些特殊情况</p>
 </p></details>
 <details><summary><span>v7.3.1</span> Bug 修复与细节优化</summary><p>
-	&emsp;&emsp;-删除 changelog.md 中重复的字(更新来自 @ZigaoWang )<br />
-	&emsp;&emsp;-修复 BIOS 无法正确访问的问题(更新来自 @ludonghengsb )</p>
+	&emsp;&emsp;-删除 changelog.md 中重复的字 (更新来自 @ZigaoWang )<br />
+	&emsp;&emsp;-修复 BIOS 无法正确访问的问题 (更新来自 @ludonghengsb )</p>
 </p></details>
 <details><summary><span>v7.3.0</span> 桌面小组件、Dock 自动隐藏、计算器完善和 Windows 更新</summary><p>
 	&emsp;&emsp;(更新来自 @User782Tec )<br />
@@ -94,26 +94,26 @@
 </p></details>
 <details><summary><span>v7.0.2</span> 计算器修复</summary><p>
 	&emsp;&emsp;(更新来自 @cong1223 和 @iewnfod)<br />
-	&emsp;&emsp;-修复计算器计算加减乘除、平方、平方根等运算的精度问题(来自 @cong1223)<br />
-	&emsp;&emsp;-只允许 calc-input 输入数字(来自 @iewnfod)<br /></p>
+	&emsp;&emsp;-修复计算器计算加减乘除、平方、平方根等运算的精度问题 (来自 @cong1223)<br />
+	&emsp;&emsp;-只允许 calc-input 输入数字 (来自 @iewnfod)<br /></p>
 </p></details>
 <details><summary><span>v7.0.1</span> 资源管理器标签页、离线界面与新闻</summary><p>
-	&emsp;&emsp;-文件资源管理器的标签页(来自 @tjy-gitnub)<br />
-	&emsp;&emsp;-新增了 Microsoft Edge 浏览器的离线界面(来自 @User782Tec)<br />
-	&emsp;&emsp;-新增新闻(来自 @Nick-DL)<br />
+	&emsp;&emsp;-文件资源管理器的标签页 (来自 @tjy-gitnub)<br />
+	&emsp;&emsp;-新增了 Microsoft Edge 浏览器的离线界面 (来自 @User782Tec)<br />
+	&emsp;&emsp;-新增新闻 (来自 @Nick-DL)<br />
 	&emsp;&emsp;-优化部分 UI<br />
 	&emsp;&emsp;-细节优化和修复</p>
 </p></details>
 <details><summary><span>v7.0.0</span> AI 助手，新增多个应用与功能</summary><p>
 	&emsp;&emsp;-Windows 12 AI Copilot(@NB-Group 提供 api, @tjy-gitnub 魔改)<br />
-	&emsp;&emsp;-任务管理器(由 @User782Tec 提供)<br />
-	&emsp;&emsp;-安全中心(由 @NB-Group 提供)<br />
-	&emsp;&emsp;-适配文件系统(由 @NB-Group 提供)(别问我为啥现在才出，要问问@NB-Group)<br />
-	&emsp;&emsp;-窗口云母(Mica)效果(由 @tjy-gitnub 提供，在设置中启用)<br />
-	&emsp;&emsp;-文件资源管理器导航栏(由 @User782Tec 提供)<br />
-	&emsp;&emsp;-任务管理器小组件(由 @User782Tec 提供)<br />
-	&emsp;&emsp;-全新壁纸(由 @tjy-gitnub 提供)<br />
-	&emsp;&emsp;-新增新闻(来自 @for-the-zero)<br />
+	&emsp;&emsp;-任务管理器 (由 @User782Tec 提供)<br />
+	&emsp;&emsp;-安全中心 (由 @NB-Group 提供)<br />
+	&emsp;&emsp;-适配文件系统 (由 @NB-Group 提供)(别问我为啥现在才出，要问问@NB-Group)<br />
+	&emsp;&emsp;-窗口云母 (Mica) 效果 (由 @tjy-gitnub 提供，在设置中启用)<br />
+	&emsp;&emsp;-文件资源管理器导航栏 (由 @User782Tec 提供)<br />
+	&emsp;&emsp;-任务管理器小组件 (由 @User782Tec 提供)<br />
+	&emsp;&emsp;-全新壁纸 (由 @tjy-gitnub 提供)<br />
+	&emsp;&emsp;-新增新闻 (来自 @for-the-zero)<br />
 	&emsp;&emsp;-修复了终端的灾难性 bug<br />
 	&emsp;&emsp;-优化部分 UI<br />
 	&emsp;&emsp;-细节优化和修复</p>
@@ -121,12 +121,12 @@
 <details>
 	<summary><span>v6.0.0</span> 文件系统，窗口大小，天气小组件，任务栏小组件</summary><p>
 	
-		&emsp;&emsp;-新增文件系统(由 @NB-Group 之后提供)<br />
-		&emsp;&emsp;-窗口大小调整功能(由 @User782Tec 提供)<br />
-		&emsp;&emsp;-保存桌面布局(由 @User782Tec 提供)<br />
-		&emsp;&emsp;-天气小组件(由 @tjy-gitnub 提供)<br />
-		&emsp;&emsp;-小组件添加到任务栏(由 @tjy-gitnub 提供，目前仅支持天气小组件)<br />
-		&emsp;&emsp;-引入全新提示框(由 @tjy-gitnub 提供)<br />
+		&emsp;&emsp;-新增文件系统 (由 @NB-Group 之后提供)<br />
+		&emsp;&emsp;-窗口大小调整功能 (由 @User782Tec 提供)<br />
+		&emsp;&emsp;-保存桌面布局 (由 @User782Tec 提供)<br />
+		&emsp;&emsp;-天气小组件 (由 @tjy-gitnub 提供)<br />
+		&emsp;&emsp;-小组件添加到任务栏 (由 @tjy-gitnub 提供，目前仅支持天气小组件)<br />
+		&emsp;&emsp;-引入全新提示框 (由 @tjy-gitnub 提供)<br />
 		&emsp;&emsp;-新的反馈通道<br />
 		&emsp;&emsp;-修复了有时开机动画不能正确显示的问题<br />
 		&emsp;&emsp;-修复了登录界面不显示的问题<br />
@@ -154,7 +154,7 @@
 <details>
 	<summary><span>v5.4.0</span> 新版 logo 与图标，UI 优化，自定主题与 winver</summary><p>
 	
-		&emsp;&emsp;<strong>(更新来自 @tjy-gitnub,其实我想发 v6 的)</strong><br />
+		&emsp;&emsp;<strong>(更新来自 @tjy-gitnub，其实我想发 v6 的)</strong><br />
 		&emsp;&emsp;-新 Logo:新版 logo<br />
 		&emsp;&emsp;-新图标：重绘替换了 win11 的图标<br />
 		&emsp;&emsp;-自定主题：支持用户更改和上传自己的主题<br />
@@ -186,11 +186,11 @@
 		&emsp;&emsp;-新增控制中心，可调整显示器亮度<br />
 		&emsp;&emsp;-新增了右键点击任务栏图标后可以关闭应用的功能<br />
 		&emsp;&emsp;-新增了将应用固定到开始菜单的功能<br />
-		&emsp;&emsp;-新增了在 Edge 浏览器中获取网页标题的功能(此项更新由@NB-Group 提供后端，@User782Tec 完善前端)<br />
+		&emsp;&emsp;-新增了在 Edge 浏览器中获取网页标题的功能 (此项更新由@NB-Group 提供后端，@User782Tec 完善前端)<br />
 		&emsp;&emsp;-适配触控设备在 Edge 浏览器中进行标签页拖动排序操作<br />
 		&emsp;&emsp;-修复了 Edge 浏览器中标签页拖动排序功能中计算位置不正确等的问题<br />
 		&emsp;&emsp;-修复了部分情况下 Edge 浏览器中加载动画圆圈位置不正确的问题<br />
-		&emsp;&emsp;-修复了部分情况下终端不能正常运作的问题(详见由 NebulaTechs 提出的 Issue#87)<br />
+		&emsp;&emsp;-修复了部分情况下终端不能正常运作的问题 (详见由 NebulaTechs 提出的 Issue#87)<br />
 		&emsp;&emsp;-修复了部分情况下 Edge 浏览器中无法正确显示标签页的问题<br />
 		&emsp;&emsp;-其他一些更改<br />
 		&emsp;&emsp;-格式化部分文档<br />
@@ -209,7 +209,7 @@
 		&emsp;&emsp;<strong>更新来自 @NB-Group 和 @User782Tec</strong><br />
 		&emsp;&emsp;-改进了登录界面，增加锁定壁纸及电源操作<br />
 		&emsp;&emsp;-兼容开发环境，在本地开发时不启用缓存和 PWA<br />
-		&emsp;&emsp;-新增了 Python 解释器(此项更新由@NB-Group 提供灵感与框架，@User782Tec 完善)<br />
+		&emsp;&emsp;-新增了 Python 解释器 (此项更新由@NB-Group 提供灵感与框架，@User782Tec 完善)<br />
 		&emsp;&emsp;-修复了终端选择不正常的问题<br />
 		&emsp;&emsp;-改进了终端，可通过应用标识符来打开应用<br />
 		&emsp;&emsp;-格式化部分文档<br />
@@ -222,7 +222,7 @@
 		&emsp;&emsp;-添加登录背景，一些外观优化<br />
 		&emsp;&emsp;-开源许可的完善<br />
 		&emsp;&emsp;-一些优化和修复<br />
-		&emsp;&emsp;-吊一下胃口：v6 将使用全新图标(壁纸?)，支持自定义主题 >_-)o
+		&emsp;&emsp;-吊一下胃口：v6 将使用全新图标 (壁纸？)，支持自定义主题 >_-)o
 	</p>
 </p></details>
 <details>
@@ -271,14 +271,14 @@
 		&emsp;&emsp;-Edge 浏览器中网页加载时的标签页动画<br />
 		&emsp;&emsp;-增加了点击窗口图标后弹出菜单的功能（部分触控设备不能触发上下文菜单）<br />
 		&emsp;&emsp;-增加应用 VSCode 与 哔哩哔哩<br />
-		&emsp;&emsp;-其它： 格式化文档和修复
+		&emsp;&emsp;-其它：格式化文档和修复
 	</p>
 </p></details>
 <details>
 	<summary><span>v5.1.0</span> 标签页拖动排序与云母效果</summary><p>
 	
-		&emsp;&emsp;-标签页：可拖动标签页排序(仅桌面端)<br />
-		&emsp;&emsp;-云母效果(试验):在设置中启用并按"用法"操作<br />
+		&emsp;&emsp;-标签页：可拖动标签页排序 (仅桌面端)<br />
+		&emsp;&emsp;-云母效果 (试验):在设置中启用并按"用法"操作<br />
 		&emsp;&emsp;-其它：细节优化和修复
 	</p>
 </p></details>
@@ -308,8 +308,8 @@
 	<summary><span>v5.0.0</span> 新增 Edge</summary><p>
 	
 		<strong>🎉🎉项目在 Github 上突破✨100✨stars✨啦！🎊🎈</strong><br />
-		&emsp;&emsp;-新增：Microsoft Edge 应用(可以在 Edge 应用中提出反馈与建议，谢谢)<br />
-		&emsp;&emsp;-新增：桌面拖动选择框(没什么大用)<br />
+		&emsp;&emsp;-新增：Microsoft Edge 应用 (可以在 Edge 应用中提出反馈与建议，谢谢)<br />
+		&emsp;&emsp;-新增：桌面拖动选择框 (没什么大用)<br />
 		&emsp;&emsp;-返璞归真：取消列表悬停效果<br />
 		&emsp;&emsp;-丰富：在文件资源管理器中添加了一些文件<br />
 		&emsp;&emsp;-精简：减小动画数量和幅度<br />
@@ -320,9 +320,9 @@
 </p></details>
 <details><summary><span>v4.3.0</span> 其实我想发布成 5.0 版的</summary><p>
 	&emsp;&emsp;-搜索菜单重新设计<br />
-	&emsp;&emsp;-列表悬停立体效果(全局，深色模式可能会明显一点，灵感源于 win11,大家可以帮忙找一个浅色模式的边框颜色)<br />
-	&emsp;&emsp;-新增鼠标悬停提示框(全局)<br />
-	&emsp;&emsp;-记事本全新设计与功能(向 Word 努力)<br />
+	&emsp;&emsp;-列表悬停立体效果 (全局，深色模式可能会明显一点，灵感源于 win11，大家可以帮忙找一个浅色模式的边框颜色)<br />
+	&emsp;&emsp;-新增鼠标悬停提示框 (全局)<br />
+	&emsp;&emsp;-记事本全新设计与功能 (向 Word 努力)<br />
 	&emsp;&emsp;-计算器新样式<br />
 	&emsp;&emsp;-新增多开亚克力设置<br />
 	&emsp;&emsp;-关于应用更新记录动画<br />
@@ -347,10 +347,10 @@
 	&emsp;&emsp;-细节优化和修复</p>
 </p></details>
 <details><summary><span>v4.0.0</span> 记录用户偏好，动画更新，新壁纸，分屏</summary><p>
-	&emsp;&emsp;-记录用户偏好设置(更新后不保留) @xqwcom<br />
+	&emsp;&emsp;-记录用户偏好设置 (更新后不保留) @xqwcom<br />
 	&emsp;&emsp;-没错又是动画更新<br />
 	&emsp;&emsp;-开始/任务栏/右键菜单/列表/切换等全面动画升级<br />
-	&emsp;&emsp;-新壁纸(好看吗?)<br />
+	&emsp;&emsp;-新壁纸 (好看吗？)<br />
 	&emsp;&emsp;-拖动窗口至左右边缘分屏<br />
 	&emsp;&emsp;-细节优化和修复</p>
 </p></details>
@@ -398,7 +398,7 @@
 	&emsp;&emsp;-细节优化和修复</p>
 </p></details>
 <details><summary><span>v3.4.1</span> 移动端适配</summary><p>
-	&emsp;&emsp;-适配了移动端的双(改成单击)<br>
+	&emsp;&emsp;-适配了移动端的双 (改成单击)<br>
 	&emsp;&emsp;-适配了移动端的拖动窗口<br>
 	&emsp;&emsp;-优化任务栏按钮点击效果<br>
 	&emsp;&emsp;-更改右键菜单样式<br>
@@ -422,7 +422,7 @@
 	&emsp;&emsp;-细节优化和修复</p>
 </p></details>
 <details><summary><span>v3.2.0</span> 增加小组件菜单</summary><p>
-	&emsp;&emsp;-增加了小组件(资讯和兴趣)菜单<br>
+	&emsp;&emsp;-增加了小组件 (资讯和兴趣) 菜单<br>
 	&emsp;&emsp;-小组件菜单中的新闻内容<br>
 	&emsp;&emsp;-小组件按钮动画效果<br>
 	&emsp;&emsp;-应用窗口标题栏样式新增<br>
@@ -510,15 +510,15 @@
 </p></details>
 <details><summary><span>v1.1.3</span> 列表 悬停、点击 效果</summary><p>
 	&emsp;&emsp;-在开始菜单、设置、关于、文件资源管理器、计算器中使用新的列表悬停、点击效果<br>
-	&emsp;&emsp;-在任务栏、关于中使用主题色(蓝紫渐变)<br>
+	&emsp;&emsp;-在任务栏、关于中使用主题色 (蓝紫渐变)<br>
 	&emsp;&emsp;-任务栏应用圆角优化<br>
-	&emsp;&emsp;-增加任务栏右下角托盘(未完全实现)<br>
+	&emsp;&emsp;-增加任务栏右下角托盘 (未完全实现)<br>
 	&emsp;&emsp;-使启动时不显示鼠标，更加逼真</p>
 </p></details>
 <details><summary><span>v1.1.2</span> 外观优化</summary><p>
 	&emsp;&emsp;-透明效果改善<br>
-	&emsp;&emsp;-在所有应用中使用主题色(蓝紫渐变)<br>
-	&emsp;&emsp;-Dock(任务)栏圆角优化<br>
+	&emsp;&emsp;-在所有应用中使用主题色 (蓝紫渐变)<br>
+	&emsp;&emsp;-Dock(任务) 栏圆角优化<br>
 	&emsp;&emsp;-在设置中使用新的头像<br>
 	&emsp;&emsp;-加速窗口动画，更加贴近原生</p>
 </p></details>

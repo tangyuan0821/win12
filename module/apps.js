@@ -1095,10 +1095,10 @@ let apps = {
             <a class="a item act" ondblclick="apps.explorer.goto('C:')" ontouchend="apps.explorer.goto('C:')" oncontextmenu="showcm(event,'explorer.folder','C:');return stop(event);">
             <img src="apps/icons/explorer/diskwin.svg"><div><p class="name">本地磁盘 (C:)</p>
             <div class="bar"><div class="content" style="width: 88%;"></div>
-            </div><p class="info">32.6 GB 可用， 共 143 GB</p></div></a><a class="a item act" ondblclick="apps.explorer.goto('D:')" ontouchend="apps.explorer.goto('D:')"
+            </div><p class="info">32.6 GB 可用，共 143 GB</p></div></a><a class="a item act" ondblclick="apps.explorer.goto('D:')" ontouchend="apps.explorer.goto('D:')"
             oncontextmenu="showcm(event,'explorer.folder','D:');return stop(event);">
             <img src="apps/icons/explorer/disk.svg"><div><p class="name">本地磁盘 (D:)</p><div class="bar"><div class="content" style="width: 15%;"></div>
-            </div><p class="info">185.3 GB 可用， 共 216 GB</p></div></a>`;
+            </div><p class="info">185.3 GB 可用，共 216 GB</p></div></a>`;
             for (let letter in apps.explorer.mounts) {
                 const handle = apps.explorer.mounts[letter];
                 resetHtml += `<a class="a item act" ondblclick="apps.explorer.goto('${letter}')" ontouchend="apps.explorer.goto('${letter}')" oncontextmenu="showcm(event,'explorer.mounted','${letter}');return stop(event);">
