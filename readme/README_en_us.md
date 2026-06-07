@@ -6,12 +6,20 @@
   <span href="https://github.com/win12-online/win12/issues" style="text-decoration:none">
     <img src="https://img.shields.io/github/issues/win12-online/win12.svg" alt="GitHub issues"/>
   </span>
-<span href="https://github.com/win12-online/win12/stargazers" style="text-decoration:none">
-<img src="https://img.shields.io/github/stars/win12-online/win12.svg" alt="GitHub stars"/>
-</span>
-<span href="https://github.com/win12-online/win12/network" style="text-decoration:none">
-<img src="https://img.shields.io/github/forks/win12-online/win12.svg" alt="GitHub forks"/>
+  <span href="https://github.com/win12-online/win12/stargazers" style="text-decoration:none">
+    <img src="https://img.shields.io/github/stars/win12-online/win12.svg" alt="GitHub stars"/>
   </span>
+  <span href="https://github.com/win12-online/win12/network" style="text-decoration:none">
+    <img src="https://img.shields.io/github/forks/win12-online/win12.svg" alt="GitHub forks"/>
+  </span>
+  <span href="https://status.win12.tech/status/win12" style="text-decoration:none">
+    <img src="https://status.win12.tech/api/badge/5/status?style=plastic" alt="GitHub forks"/>
+  </span>
+</p>
+<p align="center">
+  <a href="https://trendshift.io/repositories/115" target="_blank">
+    <img src="https://trendshift.io/api/badge/repositories/115" alt="win12-online%2Fwin12 | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+  </a>
 </p>
 <p align="center" class="language" title="Language selection">
 <a href="readme/README_en_us.md">English</a> | 
@@ -32,11 +40,14 @@
   - [Preface](#preface)
   - [Online Experience](#online-experience)
   - [Effect Display](#effect-display)
-- [Future Planning](#future-planning)
-- [Open Source Statement](#open-source-statement)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Contributors](#contributors)
-- [Support Us](#support-us)
+  - [Future Planning](#future-planning)
+  - [Open Source Statement](#open-source-statement)
+  - [Contribution Guidelines](#contribution-guidelines)
+  - [Project Index](#project-index)
+  - [Contributors](#contributors)
+  - [Support Us](#support-us)
+  - [Contact Us](#contact-us)
+  - [Community Groups](#community-groups)
     
 
     
@@ -51,7 +62,7 @@ Thus this project was born (yes, the birth of this project was just that sudden)
 
 ## Online Experience
 
-Click [here](win12-online.github.io/win12/desktop.html) to experience it.
+Click [here](https://win12.tech) to experience it.
 
 
 ## Feature Preview
@@ -134,9 +145,22 @@ For details, please see [Contribution Guide](./CONTRIBUTING.md).
 
 This project uses the i18n library to implement multi-language support. Translation work is conducted according to the [Translation Contribution Guide](lang/readme.md).
 
+## Project Index
+Due to legacy issues, much of this project's content is scattered across different repositories or websites. For easier access, here are some links.
+- [Status Monitoring](https://status.win12.tech/status/win12)
+- [Theme Repository](https://github.com/tjy-gitnub/win12-theme)
+- [PR Preview](https://github.com/tangyuan0821/win12-pr-preview)
+- [Wiki Repository](https://github.com/freedom-323/win12-wiki)
+- [Docs (Archived)](https://github.com/tangyuan0821/windows12-docs)
+- [Offline Repository](https://github.com/tjy-gitnub/win12-offline)
+- [App Data Repository](https://github.com/win12-online/win12-msstore)
+- [React Version](https://github.com/User782Tec/win12-react)
+- [CDN](https://github.com/User782Tec/win12-cdn)
+- [Extensions](https://github.com/User782Tec/win12-addons)
+
 ## Contributors
 
-Core developers: tjy-gitnub([Bilibili](https://space.bilibili.com/2010692096/)), NB-group([Bilibili](https://space.bilibili.com/1570243738/)), 782([Bilibili](https://space.bilibili.com/1046361194/)) (all three are middle school students)
+Core developers: tjy-gitnub([Bilibili](https://space.bilibili.com/2010692096/)), NB-group([Bilibili](https://space.bilibili.com/1570243738/)), 782([Bilibili](https://space.bilibili.com/1046361194/)) (all three were middle school students at the time)
 
 Project contributors: See [here](https://github.com/win12-online/win12/graphs/contributors) (Thank you to our excellent contributors!)
 
@@ -147,3 +171,22 @@ You can donate to our [Afdian account](https://afdian.com/a/qstudio)
 Special thanks to the following sponsors:
 - CursoR_光标（<https://afdian.com/a/cursor>）
 - Baymax（<https://afdian.com/u/a131cd504dea11eeb6be5254001e7c00>）
+
+## Contact Us
+### Email
+For partnership requests, media inquiries, complaints and reports, please contact the project owner: `starry-source@outlook.com`
+
+For intellectual property complaints, please CC `ipcomplaint@win12.cloud` when sending to the above address.
+
+For community building, content maintenance, suggestions, and other usage issues, please contact `generalinquiry@win12.cloud`
+
+Please include detailed contact information when writing so we can reply.
+
+**Note**: Emails ending with `win12.cloud` are handled by @tangyuan0821.
+
+## Community Groups
+We provide several groups for users and contributors to communicate.
+
+- [Microsoft Teams](https://teams.live.com/l/invite/FEA0yrNkE_bAn-ddwI)
+- [TailChat](https://nightly.paw.msgbyte.com/invite/PRdJ34zo) (experimental, inactive)
+- [Nerimity](https://nerimity.com/i/w2lvf) (experimental)
