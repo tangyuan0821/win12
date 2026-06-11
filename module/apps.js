@@ -228,19 +228,23 @@ let apps = {
                 return;
             }
 
-            document.addEventListener('keydown', (event) => {
+            apps.taskmgr._pauseKeyDownHandler = (event) => {
                 if (event.key == 'Control' && $('.window.taskmgr.foc')[0]) {
                     apps.taskmgr.paused = true;
                 }
-            });
-            document.addEventListener('keyup', (event) => {
+            };
+            apps.taskmgr._pauseKeyUpHandler = (event) => {
                 if (event.key == 'Control') {
                     apps.taskmgr.paused = false;
                 }
-            });
-            window.addEventListener('blur', () => {
+            };
+            apps.taskmgr._pauseBlurHandler = () => {
                 apps.taskmgr.paused = false;
-            });
+            };
+
+            document.addEventListener('keydown', apps.taskmgr._pauseKeyDownHandler);
+            document.addEventListener('keyup', apps.taskmgr._pauseKeyUpHandler);
+            window.addEventListener('blur', apps.taskmgr._pauseBlurHandler);
             apps.taskmgr.pauseKeyBound = true;
         },
         fold: () => {
