@@ -203,7 +203,10 @@ let apps = {
         handle: 0,
         foldHide: false,
         delay: 0,
+        paused: false,
+        pauseKeyBound: false,
         remove: () => {
+            apps.taskmgr.paused = false;
             apps.taskmgr.loaded = false;
             window.clearInterval(apps.taskmgr.handle);
             if (apps.taskmgr.preLoaded == true) {
@@ -215,9 +218,30 @@ let apps = {
             }
         },
         init: () => {
+            apps.taskmgr.bindPauseKey();
             window.setTimeout(() => {
                 $('#win-taskmgr>.menu>list.focs>a')[0].click();
             }, 200);
+        },
+        bindPauseKey: () => {
+            if (apps.taskmgr.pauseKeyBound) {
+                return;
+            }
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key == 'Control' && $('.window.taskmgr.foc')[0]) {
+                    apps.taskmgr.paused = true;
+                }
+            });
+            document.addEventListener('keyup', (event) => {
+                if (event.key == 'Control') {
+                    apps.taskmgr.paused = false;
+                }
+            });
+            window.addEventListener('blur', () => {
+                apps.taskmgr.paused = false;
+            });
+            apps.taskmgr.pauseKeyBound = true;
         },
         fold: () => {
             if (!apps.taskmgr.foldHide) {
@@ -301,6 +325,9 @@ let apps = {
                 apps.taskmgr.performanceLoad();
                 apps.taskmgr.drawGrids();
                 apps.taskmgr.handle = window.setInterval(() => {
+                    if (apps.taskmgr.paused) {
+                        return;
+                    }
                     apps.taskmgr.loadProcesses();
                     apps.taskmgr.generateProcesses();
                     apps.taskmgr.sort();
@@ -312,6 +339,9 @@ let apps = {
             }
             else if (apps.taskmgr.loaded != true && apps.taskmgr.preLoaded != true) {
                 apps.taskmgr.handle = window.setInterval(() => {
+                    if (apps.taskmgr.paused) {
+                        return;
+                    }
                     apps.taskmgr.loadProcesses();
                     apps.taskmgr.generateProcesses();
                     apps.taskmgr.sort();
