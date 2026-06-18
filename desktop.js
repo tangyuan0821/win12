@@ -782,7 +782,7 @@ const nts = {
     'about-copilot': {
         cnt: `
             <p class="tit">关于 Windows 12 Copilot</p>
-             <p>你可以使用此 AI 助手帮助你更快地完成工作，此 AI 助手基于 Qwen3-Max 模型 (有人用 Win12 工作？)<br>
+             <p>你可以使用此 AI 助手帮助你更快地完成工作，此 AI 助手基于 Deepseek v4 pro 模型 (有人用 Win12 工作？)<br>
             也请适当使用，不要谈论敏感、违规话题，<br>请有身为一个人类最基本的道德底线。<br>根据相关法律法规，我们不向欧盟用户提供服务。<br>
             在此特别感谢云智 api(yunzhiapi.cn) 为本项目提供赞助！</p>
             <a class="a" onclick="window.open('https://status.win12.tech/status/win12/','_blank');" win12_title="在浏览器新窗口打开链接">状态监测</a><br>
@@ -1707,7 +1707,7 @@ let copilot = {
     }],
     init: () => {
         $('#copilot>.chat').html('');
-        $('#copilot>.chat').append(`<div class="line system"><p class="text">本 AI 助手基于 Qwen3-max 模型，目前支持以下操作：<br>
+        $('#copilot>.chat').append(`<div class="line system"><p class="text">本 AI 助手基于 Deepseek v4 pro 模型，目前支持以下操作：<br>
         1.打开除 webapp 外大多应用<br>
         2.在浏览器中打开链接、搜索<br>
         3.发送对系统、AI 助手的反馈<br>
@@ -1745,7 +1745,7 @@ let copilot = {
             })();
         // 构建 API 请求 URL
         const encodedQuestion = encodeURIComponent(t);
-        const apiUrl = `https://yunzhiapi.cn/vip/win12/qwen3-max/index.php?question=${encodedQuestion}&system=${encodeURIComponent(copilot.history[0].content)}&uid=${uid}`;
+        const apiUrl = `https://yunzhiapi.cn/vip/win12/deepseek-v4-pro/index.php?question=${encodedQuestion}&system=${encodeURIComponent(copilot.history[0].content)}&uid=${uid}`;
 
         // API 请求
         $.ajax({
