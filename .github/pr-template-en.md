@@ -1,18 +1,13 @@
-<!-- Thank you for contributing to this project! 
+<!--
+Thank you for your contribution to this project!
+The following content is extremely important, please read it carefully.
 
-The following information is extremely important—please read it carefully. 
+# PR Title
 
-# PR Title 
+Your PR title should accurately summarize your changes.
+If your PR addresses a specific issue, please include the issue number (e.g., #114514).
 
-Your PR title should clearly and concisely summarize your changes. If your PR implements a specific issue, please include the issue number. 
+If you have read the above, you may delete this comment.
 
-# About PR Previews 
-
-Because the Cloudflare Pages-based PR preview feature is currently unstable, we recommend that you deploy the page directly using GitHub Pages from your forked repository to provide a preview. 
-
-The toggle for this feature is usually located at: 
-
-``` 
-https://github.com/username/win12/settings/pages 
-``` 
-Once you have read the above, you may delete this comment. -->
+For non-native English speakers, you can view the Chinese version of these instructions [here](https://github.com/win12-online/win12/blob/main/.github/pr-template-zh.md).
+-->
