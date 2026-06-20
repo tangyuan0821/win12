@@ -17,7 +17,7 @@ console.log('%cWindows 12 网页版 (GitHub: win12-online/win12)', 'background-i
 function loadlang(code) {
     $.i18n.properties({
         name: 'lang',
-        path: 'lang/', // 目录
+        path: 'lang/lang/', // 目录
         language: code,
         mode: 'map',
         callback: function () {
