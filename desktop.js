@@ -1152,6 +1152,9 @@ var shutdown_task = []; //关机任务，储存在这个数组里
 
 // 运行的指令
 function runcmd(cmd, inTerminal = false) {
+    var cmds = cmd.split(' ');
+    var commandName = cmds[0].toLowerCase();
+
     if (cmd.slice(0, 3) == 'cmd') {
         run_cmd = cmd;
         if (!inTerminal) {
@@ -1188,6 +1191,37 @@ DANCE           ${lang('让窗口跳舞', 'terminal.help.dance')}
 STARWARS        ${lang('原力觉醒', 'terminal.help.starwars')}
 `);
         }
+        return true;
+    }
+    else if (commandName === 'ping' || commandName === 'ping6') {
+        if (!inTerminal) {
+            openapp('terminal');
+        }
+
+        const host = cmds.slice(1).join(' ').trim();
+        const ipv6 = commandName === 'ping6';
+        const terminalOutput = $('#win-terminal>.text-cmd');
+        const terminalInput = $('#win-terminal input');
+
+        if (!window.win12Native || !window.win12Native.isTauri()) {
+            terminalOutput.append(`${commandName} 仅在 桌面版 中支持使用\n`);
+            return true;
+        }
+
+        if (!host) {
+            terminalOutput.append(`用法: ${commandName} <host>\n`);
+            return true;
+        }
+
+        terminalInput.prop('disabled', true);
+        window.win12Native.pingHost(host, ipv6, (output) => {
+            terminalOutput[0].appendChild(document.createTextNode(output));
+        }).catch((error) => {
+            terminalOutput.append((error && error.message ? error.message : String(error)) + '\n');
+        }).finally(() => {
+            terminalInput.prop('disabled', false);
+            terminalInput.focus();
+        });
         return true;
     }
     else if (cmd === 'dir' || cmd === 'ls') {
