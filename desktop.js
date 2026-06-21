@@ -1916,6 +1916,25 @@ let copilot = {
 
         $('#copilot>.inputbox').addClass('disable');
 
+        // 敏感词过滤
+        $.ajax({
+            url: `https://yunzhiapi.cn/vip/win12/mgwbgl.php?msg=${encodeURIComponent(t)}`,
+            method: 'GET',
+            success: function (filteredText) {
+                if (filteredText !== t) {
+                    $('#copilot>.chat').append(`<div class="line system"><p class="text">针对这个问题我无法为你提供相应解答。你可以尝试提供其他话题，我会尽力为你提供支持和解答。</p></div>`);
+                    $('#copilot>.chat').scrollTop($('#copilot>.chat')[0].scrollHeight);
+                    msgDoneOperate();
+                    return;
+                }
+                proceedSend();
+            },
+            error: function () {
+                proceedSend();
+            }
+        });
+
+        function proceedSend() {
         // 显示用户消息
         if (showusr) {
             $('#copilot>.chat').append(`<div class="line user"><p class="text">${t}</p></div>`);
@@ -1996,6 +2015,7 @@ let copilot = {
                 msgDoneOperate();
             }
         });
+        }
     },
     ana: (resp) => {
 
