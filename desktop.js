@@ -34,6 +34,7 @@ function loadlang(code) {
                 // if($.i18n.prop($(this).data("i18n-key"))!=$(this).attr($(this).data("i18n-attr")))console.log($(this).data("i18n-key"),$(this).attr($(this).data("i18n-attr")));
                 $(this).attr($(this).data("i18n-attr"), $.i18n.prop($(this).data("i18n-key")));
             });
+            updateAboutAppEntrypoints();
         }
     });
 }
@@ -101,6 +102,23 @@ console.log('?')
 /// 用例：lang('设置','setting.name')
 // 
 // 为开发方便，故不将简体中文纳入语言考虑
+
+function isTauriApp() {
+    return !!((window.win12Native && window.win12Native.isTauri && window.win12Native.isTauri()) || (window.__TAURI__ && window.__TAURI__.core));
+}
+
+function getAboutAppTitle() {
+    if (!isTauriApp()) return lang('关于 Win12 网页版', 'about.name');
+    if (langcode == 'en') return 'About Win12-desktop';
+    if (langcode == 'zh-TW') return '關於 Win12-desktop';
+    return '关于 Win12-desktop';
+}
+
+function updateAboutAppEntrypoints() {
+    $('.about-app-title').text(getAboutAppTitle());
+}
+
+updateAboutAppEntrypoints();
 
 
 // 后端服务器
@@ -429,7 +447,7 @@ const cms = {
                 return ['<i class="bi bi-pencil"></i> ' + lang('进入编辑模式', 'desktop.enteredit'), 'editMode();'];
             }
         },
-        ['<i class="bi bi-info-circle"></i> ' + lang('关于 Win12 网页版', 'about.name'), '$(\'#win-about>.about\').addClass(\'show\');$(\'#win-about>.update\').removeClass(\'show\');openapp(\'about\');if($(\'.window.about\').hasClass(\'min\'))minwin(\'about\');'],
+        ['<i class="bi bi-info-circle"></i> ' + getAboutAppTitle(), 'openapp(\'about\');'],
         ['<i class="bi bi-brush"></i> ' + lang('个性化', 'psnl'), 'openapp(\'setting\');$(\'#win-setting > div.menu > list > a.enable.appearance\')[0].click()']
     ],
     'desktop.icon': [
@@ -492,8 +510,8 @@ const cms = {
     ],
     'msgupdate': [
         ['<i class="bi bi-layout-text-window-reverse"></i> 查看详细', `openapp('about');if($('.window.about').hasClass('min'))
-        minwin('about');$('#win-about>.about').removeClass('show');$('#win-about>.update').addClass('show');
-        $('#win-about>.update>div>details:first-child').attr('open','open')`],
+        minwin('about');apps.about.page('update');
+        $('#win-about>.update.show>div>details:first-child').attr('open','open')`],
         ['<i class="bi bi-box-arrow-right"></i> 关闭', '$(\'.msg.update\').removeClass(\'show\')']
     ],
     'explorer.folder': [
@@ -2533,7 +2551,7 @@ function setIcon() {
     </div>
     <div class="b" ondblclick="openapp('about');" ontouchstart="openapp('about');" oncontextmenu="return showcm(event,'desktop.icon',['about',-1]);" appname="about">
         <img src="icon/about.svg">
-        <p>${lang('关于 Win12 网页版', 'about.name')}</p>
+        <p>${getAboutAppTitle()}</p>
     </div>
     <div class="b" ondblclick="openapp('edge');" ontouchstart="openapp('edge');" oncontextmenu="return showcm(event,'desktop.icon',['edge',-1]);" appname="edge">
         <img src="icon/edge.svg">

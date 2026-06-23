@@ -53,3 +53,7 @@ window.win12Native = {
     }
   },
 };
+
+if (typeof updateAboutAppEntrypoints === "function") {
+  updateAboutAppEntrypoints();
+}
