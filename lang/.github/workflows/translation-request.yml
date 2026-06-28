@@ -1,0 +1,148 @@
+name: Process Translation Request
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  process:
+    if: contains(github.event.issue.labels.*.name, 'translation-request') || startsWith(github.event.issue.title, '[Translation]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.BEDEVERE_BOT_TOKEN }}
+
+      - name: Parse issue and update zh-CN properties
+        id: parse
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = context.payload.issue.body;
+            const issueNumber = context.payload.issue.number;
+
+            function extract(field) {
+              const regex = new RegExp(`### ${field}\\s*\\n\\s*([\\s\\S]*?)\\s*(?=\\n### |\\n---|$)`, 'i');
+              const match = body.match(regex);
+              return match ? match[1].trim() : '';
+            }
+
+            const translations = extract('翻译列表');
+
+            if (!translations || translations === '_No response_') {
+              core.setFailed('Missing translation list');
+              return;
+            }
+
+            const pairs = [];
+            for (const line of translations.split('\n')) {
+              const trimmed = line.trim();
+              if (!trimmed || trimmed.startsWith('```')) continue;
+              const idx = trimmed.indexOf('=');
+              if (idx > 0) {
+                pairs.push({
+                  key: trimmed.substring(0, idx).trim(),
+                  value: trimmed.substring(idx + 1).trim()
+                });
+              }
+            }
+
+            if (pairs.length === 0) {
+              core.setFailed('No valid key=value pairs found');
+              return;
+            }
+
+            // Remove duplicate keys, keep the last one
+            const uniquePairs = [];
+            const seen = new Set();
+            for (let i = pairs.length - 1; i >= 0; i--) {
+              if (!seen.has(pairs[i].key)) {
+                seen.add(pairs[i].key);
+                uniquePairs.unshift(pairs[i]);
+              }
+            }
+
+            const filePath = 'lang/lang_zh_CN.properties';
+            let content = fs.readFileSync(filePath, 'utf-8');
+            content = content.replace(/\r\n/g, '\n');
+
+            const existingKeys = new Set();
+            const lines = content.split('\n');
+            const newLines = [];
+
+            for (const line of lines) {
+              const idx = line.indexOf('=');
+              if (idx > 0) {
+                const k = line.substring(0, idx).trim();
+                const pair = uniquePairs.find(p => p.key === k);
+                if (pair) {
+                  newLines.push(`${pair.key}=${pair.value}`);
+                  existingKeys.add(k);
+                  continue;
+                }
+              }
+              newLines.push(line);
+            }
+
+            for (const pair of uniquePairs) {
+              if (!existingKeys.has(pair.key)) {
+                newLines.push(`${pair.key}=${pair.value}`);
+              }
+            }
+
+            while (newLines.length > 0 && newLines[newLines.length - 1] === '') {
+              newLines.pop();
+            }
+
+            fs.writeFileSync(filePath, newLines.join('\n') + '\n', 'utf-8');
+
+            const keys = uniquePairs.map(p => p.key).join(', ');
+            const count = uniquePairs.length;
+            core.setOutput('keys', keys);
+            core.setOutput('count', String(count));
+
+      - name: Commit and push
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          git config user.name "Bedevere-win12-bot"
+          git config user.email "bedevere-win12-bot@users.noreply.github.com"
+          git add lang/lang_zh_CN.properties
+          git diff --cached --quiet || git commit -m "chore(i18n): update translations from issue #${ISSUE_NUMBER} (${{ steps.parse.outputs.count }} keys)"
+          git push
+
+      - name: Comment on issue and close
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `[成功] 已自动更新 zh-CN 文件（${{ steps.parse.outputs.count }} 个 key：${{ steps.parse.outputs.keys }}）。Crowdin 同步将在下次定时任务或手动触发时执行。`
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed'
+            });
+
+      - name: Comment on issue when failed
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `[失败] 自动处理失败，请检查“翻译列表”是否每行都按 \`key=value\` 格式填写。`
+            });
