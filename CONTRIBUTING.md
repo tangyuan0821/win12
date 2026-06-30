@@ -4,7 +4,7 @@
 
 若您想贡献本仓库，那您必须仔细阅读本指南的所有内容。您还应当注意本指南中**加粗的文字**和[开发规范](#开发规范)章节的内容。
 
-本仓库仍有很多问题待解决，Issue 列表长期处于积压状态。您可以先试着解决[Issue 列表](https://github.com/win12-online/win12/issues)中的已知问题和功能请求。
+本仓库仍有很多问题待解决，Issue 列表长期处于积压状态。您可以先试着解决[Issue 列表](https://github.com/win12-online/win12/issues)（失效链接）中的已知问题和功能请求。
 
 ## 基本流程
 
@@ -18,7 +18,7 @@
 
 4. 将修改推送到您的仓库
 
-5. 再[创建一个 Pull Request](https://github.com/win12-online/win12/pulls)。
+5. 再[创建一个 Pull Request](https://codeberg.org/win12-online/win12/pulls)。
 
 6. 然后`坐和放宽`，等待其他人对你的代码进行审查。
 >[!TIP]
