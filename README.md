@@ -27,8 +27,8 @@
   <a href="readme/README_fr_fr.md">Français</a>|
   <a href="readme/README_zh_tw.md">繁體中文</a>
 </p>
-<details align="center">
-  <!--<summary>Star History</summary>
+<!--<details align="center">
+  <summary>Star History</summary>
   <a href="https://star-history.com/#win12-online/win12&Date" style="text-decoration:none">
     <img src="https://api.star-history.com/svg?repos=win12-online/win12&type=Date" alt="Star History Chart">
   </a>
