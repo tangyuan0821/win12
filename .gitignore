@@ -3,8 +3,4 @@ web.config
 .idea
 
 .DS_Store
-.gitmodules
 /.forgejo/workflows/update-lang-submodule.yml
-/lang/LICENSE
-/lang/README.md
-/lang/crowdin.yml
