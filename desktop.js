@@ -1943,14 +1943,15 @@ let copilot = {
                     triggerBlockAction();
                     return;
                 }
-                proceedToSecondLayer();
+                proceedSend();
             },
             error: function () {
-                proceedToSecondLayer();
+                proceedSend();
             }
         });
 
 
+        /*  ollama/llama-guard safety check - commented out to prevent unavailability issues
         function proceedToSecondLayer() {
             $.ajax({
                 url: 'llama-guard-api.freedom-323.workers.dev',
@@ -1975,6 +1976,7 @@ let copilot = {
                 }
             });
         }
+        */
 
         function triggerBlockAction() {
             $('#copilot>.chat').append(`<div class="line system"><p class="text">针对这个问题我无法为你提供相应解答。你可以尝试提供其他话题，我会尽力为你提供支持和解答。</p></div>`);
