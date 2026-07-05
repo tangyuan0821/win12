@@ -1,7 +1,7 @@
 <p align="center">
     <img src="./icon/windows12.svg" width="100" height="100">
 </p>
-<h1 align="center">Windows 12 网页版</h1>
+<h1 align="center">Win12 Online</h1>
 <!--<p align="center" class="shields">
   <span href="https://github.com/win12-online/win12/issues" style="text-decoration:none">
     <img src="https://img.shields.io/github/issues/win12-online/win12.svg" alt="GitHub issues"/>
@@ -36,8 +36,9 @@
 
 ## 目录
 
-- [Windows 12 网页版](#windows-12-网页版)
+- [Win12 Online](#win12-online)
   - [前言](#前言)
+  - [免责声明](#免责声明)
   - [在线体验](#在线体验)
   - [桌面版](#桌面版)
   - [效果展示](#效果展示)
@@ -56,12 +57,28 @@
 
 于是就有了这个项目（是的）
 
-> [!NOTE]
-> 目前移动端适配不太完善，开桌面版网站凑合着用吧 `>v-)o`
+## 免责声明
+
+本项目（Win12 Online，简称“Win12OL”）是一个**纯粹的非商业性开源兴趣项目**，旨在通过 Web 技术探索与模拟图形操作系统的交互体验。
+
+> [!important]
+> 本项目**与微软公司（Microsoft Corporation）及其关联实体没有任何隶属、赞助、授权或认可关系**。
+>
+> - 项目名称 “Win12” 及类似表述仅乃描述项目界面风格之参考，不代表微软产品。
+> - 项目中一切界面布局设计、配色等视觉元素，系开发者基于公开资料进行**独立再创作**的结果，不曾复制、修改或使用微软的原始版权资产。
+> - 大多数图标已经开发者重绘，重绘所参考者与其它少数图标是当前版本 Windows 的图标，仅用于识别与展示目的，其版权归微软公司所有。
+> - 本项目不包含任何微软 Windows 操作系统的二进制代码、API 或内部逻辑等。
+> 
+> 项目全部代码、素材及文档等仅供学习与技术研究之用途。使用者不得利用本项目进行任何侵犯微软或其第三方权利人合法权益之行为。因使用本项目而产生的任何法律责任，均与项目贡献者及开源社区无关。
+> 
+
 
 ## 在线体验
 
-点击[此处](https://win12.tech/boot)即可体验。
+> [!NOTE]
+> 目前移动端适配不太完善，开桌面版网站凑合着用吧 `>v-)o`
+
+点击[此处](https://win12.tech)即可体验。
 
 ## 桌面版
 
