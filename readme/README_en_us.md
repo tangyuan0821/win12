@@ -1,7 +1,7 @@
 <p align="center">
     <img src="./icon/windows12.svg" width="100" height="100">
 </p>
-<h1 align="center">Windows12 Online</h1>
+<h1 align="center">Win12 Online</h1>
 <p align="center" class="shields">
   <span href="https://github.com/win12-online/win12/issues" style="text-decoration:none">
     <img src="https://img.shields.io/github/issues/win12-online/win12.svg" alt="GitHub issues"/>
@@ -23,9 +23,9 @@
 </p>
 <p align="center" class="language" title="Language selection">
 <a href="readme/README_en_us.md">English</a> | 
-<b>Simplified Chinese</b> | 
-<a href="readme/README_fr_fr.md">Français</a>|
-<a href="readme/README_zh_tw.md">Traditional Chinese</a>
+<b>简体中文</b> | 
+<a href="readme/README_fr_fr.md">Français</a> |
+<a href="readme/README_zh_tw.md">繁體中文</a>
 </p>
 <details align="center">
   <summary>Star History</summary>

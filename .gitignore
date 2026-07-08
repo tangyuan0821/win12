@@ -1,6 +1,8 @@
 web.config
-.vscode
-.idea
+.vscode/
+.idea/
+
+.claude/
 
 .DS_Store
-/.forgejo/workflows/update-lang-submodule.yml
+

@@ -2,8 +2,8 @@
 
 /*
 
-Windows 12 网页版
-    GitHub: tjy-gitnub/win12
+Win12 网页版
+    codenerg.org/win12-online/win12
 
 */
 

@@ -1,6 +1,6 @@
 const BATTERY_REFRESH_INTERVAL = 30000;
 
-console.log("Battery_power.js loaded");
+console.log("battery_power.js loaded");
 
 function normalizePercent(percent) {
   if (typeof percent !== "number" || Number.isNaN(percent)) return null;
