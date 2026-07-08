@@ -2511,28 +2511,13 @@ toggletheme() 切换主题
 	</div>
 	<div class="window run">
 		<div class="titbar">
-			<img src="icon/run.svg" class="icon">
-			<p data-i18n="run.name">运行</p>
-			<div>
-				<a class="a wbtg red" onclick="hidewin('run')"><i class="bi bi-x-lg"></i></a>
-			</div>
-		</div>
-		<div class="loadback">
-			<img src="icon/run.svg" class="icon">
 		</div>
 		<div class="content" id="win-run">
-			<div class="top">
-				<div class="icon"></div>
-				<div class="text" data-i18n="run.txt">Windows 将根据你所输入的名称，为你打开相应的程序、文件夹、文档或 Internet 资源。</div>
-			</div>
 			<div class="open">
-				<div class="prompt" data-i18n="run.open">打开：</div>
+				<div class="icon"></div>
 				<input class="input" type="text"
 					onkeyup="if (event.keyCode == 13) { hidewin('run');apps.run.run($('#win-run>.open>input').val()); }">
-			</div>
-			<div class="buttons">
-				<a class="a submit act" onclick="hidewin('run');apps.run.run($('#win-run>.open>input').val())" data-i18n="ok">确定</a>
-				<a class="a cancel act" onclick="hidewin('run')" data-i18n="cancel">取消</a>
+				<a class="a button" onclick="hidewin('run');apps.run.run($('#win-run>.open>input').val())" data-i18n="ok">运行</a>
 			</div>
 		</div>
 	</div>

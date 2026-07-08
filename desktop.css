@@ -2538,10 +2538,14 @@ input-before {
 }
 
 .window.run {
-    width: 420px;
-    height: 220px;
+    width: 520px;
+    height: 70px !important;
     left: 20px;
     bottom: 60px;
+}
+
+.window.run>.titbar {
+    display: none;
 }
 
 .window.notrans {
